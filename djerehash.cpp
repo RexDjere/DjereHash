@@ -1,7 +1,8 @@
 //*****************************************
 // DjereHash: a simple hashing algorithm. *
 //*****************************************
-// Author: Rex Djere                      *
+// Author: Rex Djere  
+// contact: rdjere <at> gmail <dot> com   *
 // Version 0.1                            *
 // License: GNU GPL v.3                   *
 // copyright: Rex Djere, Dec. 6, 2013.    *
