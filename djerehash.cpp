@@ -46,9 +46,9 @@ int main ()
             hashBins[i] = hashBins[i] + (input[i] * 27) + input[i]%7 + (i+1)%11 + (i+2)%104729 + (i * 256);
             binSum = binSum + hashBins[i];
 
-            if(i%7==0 && i<252)
+            if(i%7==0 && i<256)
             {
-                cout << charSet[binSum%36]; // 36 character hash output
+                cout << charSet[binSum%62]; // 36 character hash output
             }
         }
         cout << endl << "Please enter 1 to hash another string, or 0 to quit:" << " ";
@@ -61,7 +61,7 @@ int main ()
             input[k]=0;
             hashBins[k]=0;
         }
-            binSum = 0; // reset binSum to zero
+            binSum = 0;
     }
     return 0;
 }
