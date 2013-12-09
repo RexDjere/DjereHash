@@ -39,9 +39,6 @@ int main ()
                 binSum = binSum + input[j+1];
             }
 
-            // the main hash function
-            hashBins[i] = hashBins[i] + input[i];
-            binSum = binSum + hashBins[i] *hashBins[i];
 
             if(i%7==0)
             {
