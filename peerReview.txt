@@ -52,7 +52,7 @@ FIXED.
 ****************************************************************************************************
 Rev. 0.15
 
-!@ collides with @!
+!@ collides with @! and 16.
 
 
 separate functionality into a separate procedure
