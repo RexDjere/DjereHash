@@ -46,6 +46,12 @@ FIXED.
 ****************************************************************************************************
 Rev. 0.14
 
+All single character inputs result in same output hash.
+FIXED.
+
+****************************************************************************************************
+Rev. 0.15
+
 separate functionality into a separate procedure
 
 You will need to be more rigorous than that, feeding whole dictionaries through your hash function.
