@@ -22,10 +22,8 @@ FIXED.
 ***************************************************************
 Rev. 0.13
 
-
 Comments like this are redundant: binSum = 0; // reset binSum to zero
 FIXED.
-
 
 your algorithm outputs the same hash regardless of the order of the last 4 input characters.
 FIXED.
