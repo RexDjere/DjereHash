@@ -3,7 +3,7 @@
 *********************************************************************
 * Author: Rex Djere                                                 *
 * Contact rdjere gmail                                              *
-* Revision 0.13, 12/09/2013 (see revisions.txt and peerReview.txt)  *
+* Revision 0.14, 12/09/2013 (see revisions.txt and peerReview.txt)  *
 * License: GNU GPL v.3 (see license.txt)                            *
 * copyright: Rex Djere, 12/06/2013                                  *
 ********************************************************************/
@@ -38,9 +38,10 @@ int main ()
             {
                 // hash function is exponential to provide maximum randomness of hash output at moderate cost.
                 if(j%5 != 0) binSum = binSum + pow(input[j],j%5);
-                else binSum = binSum + pow(input[j],j%7);
+                else if(j%1 != 0) binSum = binSum + pow(input[j],j%7);
+                else binSum = binSum + pow(input[j],2);
             }
-            
+
             if(i%7==0)
             {
                 cout << charSet[binSum%62]; // 36 character hash output
@@ -60,3 +61,4 @@ int main ()
     }
     return 0;
 }
+
