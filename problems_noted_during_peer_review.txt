@@ -1,0 +1,15 @@
+consistant coding style (brackets with spaces )
+ 
+wrong indentation (at the end)
+    
+"while (Pcontinue == true)" -> "while (Pcontinue)"
+    
+"return 0;" at the end of "int main()" is no needed.
+    
+charSet is never changed, could be const
+    
+separate functionality into a separate procedure
+    
+write a top comment explaining what your code does in general.
+    
+
