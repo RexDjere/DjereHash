@@ -63,4 +63,5 @@ int main ()
         }
             binSum = 0; // reset binSum to zero
     }
+    return 0;
 }
