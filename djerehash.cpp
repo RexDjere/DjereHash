@@ -1,13 +1,12 @@
-//*****************************************
-// DjereHash: a simple hashing algorithm. *
-//*****************************************
-// Author: Rex Djere                      *
-// contact: rdjere gmail                  *
-// language: C++                          *
-// Version 0.1                            *
-// License: GNU GPL v.3                   *
-// copyright: Rex Djere, Dec. 6, 2013.    *
-//*****************************************
+/*************************************************
+* DjereHash: a simple hashing algorithm.         *
+**************************************************
+* Author: Rex Djere                              *
+* Contact rdjere gmail                           *                   
+* Revision 0.11, 12/08/2013 (see revisions.txt)  *
+* License: GNU GPL v.3 (see license.txt)         *
+* copyright: Rex Djere, 12/06/2013               *  
+*************************************************/
 
 #include <iostream>
 #include <cmath>
@@ -42,7 +41,8 @@ int main ()
        			{
             			binSum = binSum + input[j];
        			}
-        		hashBins[i] = hashBins[i] + input[i] + (i * 256);
+
+        		hashBins[i] = hashBins[i] + (input[i] * 27) + input[i]%7 + (i+1)%11 + (i+2)%104729 + (i * 256);
         		binSum = binSum + hashBins[i];
         		if(i%7==0 && i<252)
         		{
