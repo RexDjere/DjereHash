@@ -40,8 +40,7 @@ int main ()
                 if(j%5 != 0) binSum = binSum + pow(input[j],j%5);
                 else binSum = binSum + pow(input[j],j%7);
             }
-
-
+            
             if(i%7==0)
             {
                 cout << charSet[binSum%62]; // 36 character hash output
