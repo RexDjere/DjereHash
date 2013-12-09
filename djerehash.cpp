@@ -36,6 +36,7 @@ int main ()
         {
             for(int j=0; j< 256; j++)
             {
+                // hash function is exponential to provide maximum randomness of hash output at moderate cost.
                 if(j%5 != 0) binSum = binSum + pow(input[j],j%5);
                 else binSum = binSum + pow(input[j],j%7);
             }
