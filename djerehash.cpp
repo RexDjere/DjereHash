@@ -1,12 +1,13 @@
-/*************************************************
-* DjereHash: a simple hashing algorithm.         *
-**************************************************
-* Author: Rex Djere                              *
-* Contact rdjere gmail                           *
-* Revision 0.11, 12/08/2013 (see revisions.txt)  *
-* License: GNU GPL v.3 (see license.txt)         *
-* copyright: Rex Djere, 12/06/2013               *
-*************************************************/
+/********************************************************************
+* DjereHash: a simple hashing program.                              *
+*********************************************************************
+* Author: Rex Djere                                                 *
+* Contact rdjere gmail                                              *
+* Revision 0.11, 12/08/2013 (see revisions.txt and peerReview.txt)  *
+* License: GNU GPL v.3 (see license.txt)                            *
+* copyright: Rex Djere, 12/06/2013                                  *
+********************************************************************/
+// This program take a string (maximum of 256 characters), and coverts it to a 36 character hash.
 
 #include <iostream>
 #include <cmath>
@@ -22,21 +23,21 @@ int main ()
     unsigned int hashBins[256] = {}; // stores user input in bins (bin 1 => 0-256, bin 2 => 257-513 etc. etc.)
     unsigned int binSum = 0;
     char input[256]={};
-    unsigned char charSet[62] = {'D','y','6','Q','s','1','A','r','P','5','n','C',
+    const unsigned char charSet[62] =     {'D','y','6','Q','s','1','A','r','P','5','n','C',
                                      'M','2','b','l','f','U','9','t','J','o','w','d',
                                      'Z','k','4','g','O','H','p','X','S','0','c','m',
                                      'B','Y','3','N','e','W','i','8','v','E','L','V',
                                      'G','7','T','x','K','u','R','I','a','z','q','h','F','j'};
     bool Pcontinue = true; // user chooses to continue or quit program
 
-    while (Pcontinue == true)
+    while (Pcontinue)
     {
         cout << "Enter the string that you would like to hash:" << endl;
         cin.getline(input,256);
 
         for(i=0;i<256;i++)
         {
-            for( j=0; j< 256; j++)
+            for(j=0; j< 256; j++)
             {
                 binSum = binSum + input[j];
             }
@@ -61,8 +62,5 @@ int main ()
             hashBins[k]=0;
         }
             binSum = 0; // reset binSum to zero
-
-
-	}
-	return 0;
+    }
 }
