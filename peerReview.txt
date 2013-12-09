@@ -10,7 +10,7 @@ FIXED.
 FIXED.
     
 "return 0;" at the end of "int main()" is no needed.
-FIXED.
+SKIPPED.
     
 charSet is never changed, could be const
 FIXED.
