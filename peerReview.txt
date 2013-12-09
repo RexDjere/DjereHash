@@ -37,6 +37,12 @@ FIXED.
 Remove redundant binSum function.
 FIXED.
 
+simplify hash function.
+FIXED.
+
+better explain hash function with comment.
+FIXED.
+
 ****************************************************************************************************
 Rev. 0.14
 
