@@ -29,7 +29,6 @@ int main ()
                                      'G','7','T','x','K','u','R','I','a','z','q','h','F','j'};
     bool Pcontinue = true; // user chooses to continue or quit program
 
-
     while (Pcontinue == true)
     {
         cout << "Enter the string that you would like to hash:" << endl;
@@ -40,14 +39,16 @@ int main ()
             for( j=0; j< 256; j++)
             {
                 binSum = binSum + input[j];
-            }    
-                // the main hash function
-                hashBins[i] = hashBins[i] + (input[i] * 27) + input[i]%7 + (i+1)%11 + (i+2)%104729 + (i * 256);
-                binSum = binSum + hashBins[i];
-                if(i%7==0 && i<252)
-                {
-                    cout << charSet[binSum%36]; // 36 character hash output
-                }
+            }
+
+            // the main hash function
+            hashBins[i] = hashBins[i] + (input[i] * 27) + input[i]%7 + (i+1)%11 + (i+2)%104729 + (i * 256);
+            binSum = binSum + hashBins[i];
+
+            if(i%7==0 && i<252)
+            {
+                cout << charSet[binSum%36]; // 36 character hash output
+            }
         }
         cout << endl << "Please enter 1 to hash another string, or 0 to quit:" << " ";
         cin >> Pcontinue; // to do: add detection for erroneous input.
