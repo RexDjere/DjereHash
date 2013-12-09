@@ -52,6 +52,9 @@ FIXED.
 ****************************************************************************************************
 Rev. 0.15
 
+!@ collides with @!
+
+
 separate functionality into a separate procedure
 
 You will need to be more rigorous than that, feeding whole dictionaries through your hash function.
