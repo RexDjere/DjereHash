@@ -22,5 +22,7 @@ Rev. 0.13
 
 separate functionality into a separate procedure
 
+In regards to your "big picture" idea: hashing and cryptography in general are very fun subjects but almost impossible to get right. You should also try implementing some common algorithms like B-trees, hash maps, sorting, etc.
+
     
 
