@@ -1,3 +1,4 @@
+// Thank you to everyone on Reddit who helped with the peer review process. Unfortunately, the thread got too negative (down votes), so I deleted it.
 Rev. 0.12
 
 consistant coding style (brackets with spaces )
