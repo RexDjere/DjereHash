@@ -7,7 +7,7 @@
 * License: GNU GPL v.3 (see license.txt)                            *
 * copyright: Rex Djere, 12/06/2013                                  *
 ********************************************************************/
-// This program take a string (maximum of 256 characters), and coverts it to a 36 character hash.
+// This program take a string (maximum of 256 characters), and coverts it to a 37 character hash.
 
 #include <iostream>
 #include <cmath>
