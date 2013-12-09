@@ -1,15 +1,27 @@
+Rev. 0.12
+***********************************************
 consistant coding style (brackets with spaces )
+FIXED.
  
 wrong indentation (at the end)
+FIXED.
     
 "while (Pcontinue == true)" -> "while (Pcontinue)"
+FIXED.
     
 "return 0;" at the end of "int main()" is no needed.
+FIXED.
     
 charSet is never changed, could be const
-    
-separate functionality into a separate procedure
+FIXED.
     
 write a top comment explaining what your code does in general.
+FIXED.
+*************************************************
+Rev. 0.13
+*************************************************
+
+separate functionality into a separate procedure
+
     
 
