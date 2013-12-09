@@ -36,6 +36,9 @@ FIXED.
 As this is C++ I would put the counters in the loops, i.e.: for(int i=0;i<256;i++)
 FIXED.
 
+Remove redundant binSum function.
+FIXED.
+
 ****************************************************************************************************
 Rev. 0.14
 
