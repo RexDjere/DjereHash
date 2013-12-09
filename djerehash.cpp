@@ -18,11 +18,11 @@ using namespace std;
 
 int main ()
 {
-	int i; // counter
+	int i, j, k; // counters
 	unsigned int hashBins[256] = {}; // stores user input in bins (bin 1 => 0-256, bin 2 => 257-513 etc. etc.)
-    unsigned int binSum = 0;
-    char input[256]={};
-    unsigned char charSet[62] = {'D','y','6','Q','s','1','A','r','P','5','n','C',
+    	unsigned int binSum = 0;
+    	char input[256]={};
+    	unsigned char charSet[62] = {'D','y','6','Q','s','1','A','r','P','5','n','C',
                                      'M','2','b','l','f','U','9','t','J','o','w','d',
                                      'Z','k','4','g','O','H','p','X','S','0','c','m',
                                      'B','Y','3','N','e','W','i','8','v','E','L','V',
@@ -37,7 +37,7 @@ int main ()
 
     		for(i=0;i<256;i++)
     		{
-       			for(int j=0; j< 256; j++)
+       			for( j=0; j< 256; j++)
        			{
             			binSum = binSum + input[j];
        			}
@@ -54,8 +54,8 @@ int main ()
 		cin >> Pcontinue; // to do: add detection for erroneous input.
 		cin.ignore(Pcontinue); // clear cin to avoid error in cin getline around line 35
 
-		// reset all arrays to zero
-		for(int k = 0; k < 256; k++)
+		// reset all arrays and binSum to zero
+		for(k = 0; k < 256; k++)
 		{
 		    input[k]=0;
 		    hashBins[k]=0;
