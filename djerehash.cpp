@@ -23,11 +23,9 @@ int main ()
     unsigned int hashBins[256] = {}; // stores user input in bins (bin 1 => 0-256, bin 2 => 257-513 etc. etc.)
     unsigned int binSum = 0;
     char input[256]={};
-    const unsigned char charSet[62] =     {'D','y','6','Q','s','1','A','r','P','5','n','C',
-                                     'M','2','b','l','f','U','9','t','J','o','w','d',
-                                     'Z','k','4','g','O','H','p','X','S','0','c','m',
-                                     'B','Y','3','N','e','W','i','8','v','E','L','V',
-                                     'G','7','T','x','K','u','R','I','a','z','q','h','F','j'};
+    const unsigned char charSet[62] = {'0','1','2','3','4','5','6','7','8','9',
+    'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z',
+    'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'};
     bool Pcontinue = true; // user chooses to continue or quit program
 
     while (Pcontinue)
@@ -39,14 +37,14 @@ int main ()
         {
             for(j=0; j< 256; j++)
             {
-                binSum = binSum + input[j];
+                binSum = binSum + input[j+1];
             }
 
             // the main hash function
-            hashBins[i] = hashBins[i] + (input[i] * 27) + input[i]%7 + (i+1)%11 + (i+2)%104729 + (i * 256);
-            binSum = binSum + hashBins[i];
+            hashBins[i] = hashBins[i] + input[i];
+            binSum = binSum + hashBins[i] *hashBins[i];
 
-            if(i%7==0 && i<256)
+            if(i%7==0)
             {
                 cout << charSet[binSum%62]; // 36 character hash output
             }
