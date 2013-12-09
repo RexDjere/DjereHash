@@ -3,7 +3,7 @@
 *********************************************************************
 * Author: Rex Djere                                                 *
 * Contact rdjere gmail                                              *
-* Revision 0.12, 12/09/2013 (see revisions.txt and peerReview.txt)  *
+* Revision 0.13, 12/09/2013 (see revisions.txt and peerReview.txt)  *
 * License: GNU GPL v.3 (see license.txt)                            *
 * copyright: Rex Djere, 12/06/2013                                  *
 ********************************************************************/
@@ -19,7 +19,6 @@ using namespace std;
 
 int main ()
 {
-    int i, j, k; // counters
     unsigned int hashBins[256] = {}; // stores user input in bins (bin 1 => 0-256, bin 2 => 257-513 etc. etc.)
     unsigned int binSum = 0;
     char input[256]={};
@@ -33,9 +32,9 @@ int main ()
         cout << "Enter the string that you would like to hash:" << endl;
         cin.getline(input,256);
 
-        for(i=0;i<256;i++)
+        for(int i=0;i<256;i++)
         {
-            for(j=0; j< 256; j++)
+            for(int j=0; j< 256; j++)
             {
                 binSum = binSum + input[j+1];
             }
@@ -54,7 +53,7 @@ int main ()
         cin.ignore(Pcontinue); // clear cin to avoid error in cin getline around line 35
 
         // reset all arrays to zero
-        for(k = 0; k < 256; k++)
+        for(int k = 0; k < 256; k++)
         {
             input[k]=0;
             hashBins[k]=0;
