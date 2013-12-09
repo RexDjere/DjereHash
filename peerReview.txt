@@ -28,6 +28,12 @@ FIXED.
 your algorithm outputs the same hash regardless of the order of the last 4 input characters.
 FIXED.
 
+strange ordering of charSet array.
+FIXED.
+
+As this is C++ I would put the counters in the loops, i.e.: for(int i=0;i<256;i++)
+FIXED.
+
 ****************************************************************************************************
 Rev. 0.14
 
@@ -55,7 +61,7 @@ see here http://burtleburtle.net/bob/hash/evahash.html
 
 
 
-As this is C++ I would put the counters in the loops, i.e.: for(int i=0;i<256;i++)
+
 
 As hashBin[i] starts out at zero for each hash the line: hashBins[i] = hashBins[i] +.... 
 can really just be hashBins[i] = .... which means the array is not needed at all.
