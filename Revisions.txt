@@ -1,1 +1,2 @@
-12/08/13 Created original revision.
+12/06/2013 Created original version.
+12/08/2013 Modified function to eliminate collision found between "Rex" and "victor". New function also made hash of certain words more random (e.g. "Linux").
