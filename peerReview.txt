@@ -27,6 +27,7 @@ Comments like this are redundant: binSum = 0; // reset binSum to zero
 your algorithm outputs the same hash regardless of the order of the last 4 input characters.
 
 ****************************************************************************************************
+Rev. 0.14
 
 separate functionality into a separate procedure
 
