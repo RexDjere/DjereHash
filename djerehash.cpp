@@ -2,10 +2,10 @@
 * DjereHash: a simple hashing program.                              *
 *********************************************************************
 * Author: Rex Djere                                                 *
-* Contact rdjere gmail                                              *
-* Revision 0.15, 12/09/2013 (see revisions.txt and peerReview.txt)  *
+* Contact: rdjere gmail                                              *
+* Revision: 0.15, 12/09/2013 (see revisions.txt and peerReview.txt)  *
 * License: GNU GPL v.3 (see license.txt)                            *
-* copyright: Rex Djere, 12/06/2013                                  *
+* Copyright: Rex Djere, 12/06/2013                                  *
 ********************************************************************/
 // This program take a string (maximum of 256 characters), and coverts it to a 37 character hash.
 
