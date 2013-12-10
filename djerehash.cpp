@@ -3,7 +3,7 @@
 *********************************************************************
 * Author: Rex Djere                                                 *
 * Contact rdjere gmail                                              *
-* Revision 0.14, 12/09/2013 (see revisions.txt and peerReview.txt)  *
+* Revision 0.15, 12/09/2013 (see revisions.txt and peerReview.txt)  *
 * License: GNU GPL v.3 (see license.txt)                            *
 * copyright: Rex Djere, 12/06/2013                                  *
 ********************************************************************/
@@ -37,9 +37,9 @@ int main ()
             for(int j=0; j< 256; j++)
             {
                 // hash function is exponential to provide maximum randomness of hash output at moderate cost.
-                if(j%5 != 0) binSum = binSum + pow(input[j],j%5);
-                else if(j%1 != 0) binSum = binSum + pow(input[j],j%7);
-                else binSum = binSum + pow(input[j],2);
+                if(j%5 != 0) binSum = (binSum + 1) * 3 + input[j+1] + pow(input[j],j%5);
+                else if(j%1 != 0) binSum = (binSum + 1) * 3 + input[j+1] + pow(input[j],j%7);
+                else binSum = (binSum + 1) * 3 + input[j+1]+ pow(input[j],2);
             }
 
             if(i%7==0)
