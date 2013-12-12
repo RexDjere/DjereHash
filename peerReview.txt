@@ -1,5 +1,5 @@
 // This file contains peer review information used to continuosly improve DjereHash.
-
+************************************************************************************
 Rev. 0.12
 
 consistant coding style (brackets with spaces )

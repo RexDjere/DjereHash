@@ -1,4 +1,4 @@
-12/06/2013 (0.10) Created original version. Test
+12/06/2013 (0.10) Created original version. 
 12/08/2013 (0.11) Modified function on line 44 by adding modulus of prime numbers to eliminate collision found between "Rex" and "victor". New function also made hash of certain words more random (e.g. "Linux").
 12/08/2013 (0.12/0.13) Several changes based on Reddit peer review. See peerReview.txt for details.
 12/08/2013 (0.14) Fixed error where all single character inputs resulted in same hash output.
