@@ -1,12 +1,12 @@
-/********************************************************************
-* DjereHash: a simple hashing program.                              *
-*********************************************************************
-* Author: Rex Djere                                                 *
+/*********************************************************************
+* DjereHash: a simple hashing program.                               *
+**********************************************************************
+* Author: Rex Djere                                                  *
 * Contact: rdjere gmail                                              *
-* Revision: 0.15, 12/09/2013 (see revisions.txt and peerReview.txt)  *
-* License: GNU GPL v.3 (see license.txt)                            *
-* Copyright: Rex Djere, 12/06/2013                                  *
-********************************************************************/
+* Revision: 0.16, 12/12/2013 (see revisions.txt and peerReview.txt)  *
+* License: GNU GPL v.3 (see license.txt)                             *
+* Copyright: Rex Djere, 12/06/2013                                   *
+*********************************************************************/
 // This program take a string (maximum of 256 characters), and coverts it to a 37 character hash.
 
 #include <iostream>
@@ -37,9 +37,8 @@ int main ()
             for(int j=0; j< 256; j++)
             {
                 // hash function is exponential to provide maximum randomness of hash output at moderate cost.
-                if(j%5 != 0) binSum = (binSum + 1) * 3 + input[j+1] + pow(input[j],j%5);
-                else if(j%1 != 0) binSum = (binSum + 1) * 3 + input[j+1] + pow(input[j],j%7);
-                else binSum = (binSum + 1) * 3 + input[j+1]+ pow(input[j],2);
+                binSum = binSum + (input[j]+1)*pow(j+1,2);
+                binSum = binSum * pow(j+1,1.5);
             }
 
             if(i%7==0)
