@@ -3,7 +3,7 @@
 **********************************************************************
 * Author: Rex Djere                                                  *
 * Contact: rdjere gmail                                              *
-* Revision: 0.17, 12/12/2013 (see revisions.txt and peerReview.txt)  *
+* Revision: 0.18, 12/14/2013 (see revisions.txt)                     *
 * License: GNU GPL v.3 (see license.txt)                             *
 * Copyright: Rex Djere, 12/06/2013                                   *
 *********************************************************************/
@@ -35,9 +35,9 @@ int main ()
         {
             for(int j=0; j< 256; j++)
             {
-                // hash function is exponential to provide maximum randomness of hash output at moderate cost.
+                // hash function is exponential/logarithmic to provide maximum randomness of hash output in O( N^2 ) time.
                 ipSum = ipSum + (input[j]+1)*pow(j+1,2);
-                ipSum = ipSum * pow(j+1,1.5);
+                ipSum = (ipSum + 1) * log(j+1000);
             }
 
             if(i%7==0)
