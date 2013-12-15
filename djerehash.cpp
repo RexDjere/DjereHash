@@ -42,7 +42,7 @@ int main ()
         }
         cout << endl << "Please enter 1 to hash another string, or 0 to quit:" << " ";
         cin >> Pcontinue; // to do: add detection for erroneous input.
-        cin.ignore(Pcontinue); // clear cin to avoid error in cin getline around line 35
+        cin.ignore(Pcontinue); // clear cin to avoid error in cin getline
 
         // reset input array to zero
         for(int k = 0; k < 256; k++) input[k]=0;
