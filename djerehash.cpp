@@ -3,19 +3,14 @@
 **********************************************************************
 * Author: Rex Djere                                                  *
 * Contact: rdjere gmail                                              *
-* Revision: 0.18, 12/14/2013 (see revisions.txt)                     *
+* Revision: 0.19, 12/15/2013 (see revisions.txt)                     *
 * License: GNU GPL v.3 (see license.txt)                             *
 * Copyright: Rex Djere, 12/06/2013                                   *
 *********************************************************************/
 // This program take a string (maximum of 256 characters), and coverts it to a 37 character hash.
-
 #include <iostream>
 #include <cmath>
-#include <string>
-#include <array>
-
 using namespace std;
-
 
 int main ()
 {
@@ -42,7 +37,7 @@ int main ()
 
             if(i%7==0)
             {
-                cout << charSet[ipSum%62]; // 36 character hash output
+                cout << charSet[ipSum%62]; // 37 character hash output
             }
         }
         cout << endl << "Please enter 1 to hash another string, or 0 to quit:" << " ";
