@@ -3,7 +3,7 @@
 **********************************************************************
 * Author: Rex Djere                                                  *
 * Contact: rdjere gmail                                              *
-* Revision: 0.20, 12/15/2013 (see revisions.txt)                     *
+* Revision: 0.19, 12/15/2013 (see revisions.txt)                     *
 * License: GNU GPL v.3 (see license.txt)                             *
 * Copyright: Rex Djere, 12/06/2013                                   *
 *********************************************************************/
