@@ -1,9 +1,0 @@
-12/06/2013 (0.10) Created original version. 
-12/08/2013 (0.11) Modified function on line 44 by adding modulus of prime numbers to eliminate collision found between "Rex" and "victor". New function also made hash of certain words more random (e.g. "Linux").
-12/08/2013 (0.12/0.13) Several changes based on Reddit peer review. See peerReview.txt for details.
-12/08/2013 (0.14) Fixed error where all single character inputs resulted in same hash output.
-12/09/2013 (0.15) Added more randomness to hashing function. Recently found collisions were eliminated.
-12/12/2013 (0.16) Simplified hashing function.
-12/12/2013 (0.17) Removed hashBin Array.
-12/14/2013 (0.18) Revised hash algorithm to make hash outputs consistent between Linux and Windows complilations. Removed peerReview.txt (redundant).
-12/15/2013 (0.19) Fixed typographical error. Removed unecessary #includes <array> and <string>.
