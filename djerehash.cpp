@@ -3,14 +3,13 @@
 **********************************************************************
 * Author: Rex Djere                                                  *
 * Contact: rdjere gmail                                              *
-* Revision: 0.20, 12/28/2013 (see revisions.txt)                     *
+* Revision: 0.21, 12/29/2013 (see revisions.txt)                     *
 * License: GNU GPL v.3 (see license.txt)                             *
 * Copyright: Rex Djere, 12/06/2013                                   *
 *********************************************************************/
 // This program take a string (maximum of 256 characters), and coverts it to a 37 character hash.
 #include <iostream>
 #include <cmath>
-using namespace std;
 
 int main ()
 {
@@ -23,8 +22,8 @@ int main ()
 
     while (pContinue)
     {
-        cout << "Enter the string that you would like to hash:" << endl;
-        cin.getline(input,256);
+        std::cout << "Enter the string that you would like to hash:" << std::endl;
+        std::cin.getline(input,256);
 
         for(int i=0;i<256;i++)
         {
@@ -37,12 +36,12 @@ int main ()
 
             if(i%7==0)
             {
-                cout << charSet[ipSum%62]; // 37 character hash output
+                std::cout << charSet[ipSum%62]; // 37 character hash output
             }
         }
-        cout << endl << "Please enter 1 to hash another string, or 0 to quit:" << " ";
-        cin >> pContinue; // to do: add detection for erroneous input.
-        cin.ignore(pContinue); // clear cin to avoid error in cin getline
+        std::cout << std::endl << "Please enter 1 to hash another string, or 0 to quit:" << " ";
+        std::cin >> pContinue; // to do: add detection for erroneous input.
+        std::cin.ignore(pContinue); // clear cin to avoid error in cin getline
 
         // reset input array to zero
         for(int k = 0; k < 256; k++) input[k]=0;

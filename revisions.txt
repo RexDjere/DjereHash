@@ -8,3 +8,4 @@
 12/14/2013 (0.18) Revised hash algorithm to make hash outputs consistent between Linux and Windows compilations. Removed peerReview.txt (redundant).
 12/15/2013 (0.19) Fixed typographical error. Removed unecessary #includes <array> and <string>.
 12/28/2013 (0.20) Standardized variable naming.
+12/29/2013 (0.21) Added future-proofing by removing namespace std.
