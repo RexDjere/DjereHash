@@ -6,7 +6,7 @@
 * Revision: 0.22, 12/29/2013 (see revisions.txt)                     *
 * License: GNU GPL v.3 (see license.txt)                             *
 * Copyright: Rex Djere, 12/06/2013                                   *
-*********************************************************************/1
+*********************************************************************/
 
 // DjereHash take a string (maximum of 256 characters), and converts it to a 256 character hash.
 // The final hash is reduced to 37 characters by sampling the full hash.
