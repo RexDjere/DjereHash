@@ -3,7 +3,7 @@
 **********************************************************************
 * Author: Rex Djere                                                  *
 * Contact: rdjere gmail                                              *
-* Revision: 0.19, 12/15/2013 (see revisions.txt)                     *
+* Revision: 0.20, 12/28/2013 (see revisions.txt)                     *
 * License: GNU GPL v.3 (see license.txt)                             *
 * Copyright: Rex Djere, 12/06/2013                                   *
 *********************************************************************/
@@ -19,9 +19,9 @@ int main ()
     const unsigned char charSet[62] = {'0','1','2','3','4','5','6','7','8','9',
     'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z',
     'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'};
-    bool Pcontinue = true; // user chooses to continue or quit program
+    bool pContinue = true; // user chooses to continue or quit program
 
-    while (Pcontinue)
+    while (pContinue)
     {
         cout << "Enter the string that you would like to hash:" << endl;
         cin.getline(input,256);
@@ -41,8 +41,8 @@ int main ()
             }
         }
         cout << endl << "Please enter 1 to hash another string, or 0 to quit:" << " ";
-        cin >> Pcontinue; // to do: add detection for erroneous input.
-        cin.ignore(Pcontinue); // clear cin to avoid error in cin getline
+        cin >> pContinue; // to do: add detection for erroneous input.
+        cin.ignore(pContinue); // clear cin to avoid error in cin getline
 
         // reset input array to zero
         for(int k = 0; k < 256; k++) input[k]=0;
