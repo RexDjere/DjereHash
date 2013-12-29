@@ -20,7 +20,7 @@ int main ()
 
     // hashModulus samples full 256 character hash and returns 37 characters (256/7 is approximately 37).
     // If a collision is found in future, lengthen hash by lowering value of hashModulus.
-    int hashModulus = 7;
+    const unsigned int hashModulus = 7;
 
     // 37 character hash can consist of any character stored in charSet array.
     // for example, DjereHash of "Linux" is DX2UBtq6jZBqLGf5KFZNduDRti3z6yKxiT5th
@@ -37,7 +37,7 @@ int main ()
         {
             for(int j=0; j< 256; j++)
             {
-                // You can generate different hashes for same input by changing functions below. 
+                // You can generate different hashes for same input by changing functions below.
                 ipSum = ipSum + (input[j]+1)*pow(j+1,2); // default: ipSum = ipSum + (input[j]+1)*pow(j+1,2);
                 ipSum = (ipSum + 1) * log(j+1000); // default: ipSum = (ipSum + 1) * log(j+1000);
             }
