@@ -14,16 +14,16 @@
 
 int main ()
 {
-    unsigned int ipSum = 0; // proportional to ASCII sum of all characters input by user, used to randomize the hash output
+    unsigned int ipSum = 0; // proportional to ASCII sum of all characters input by user
     char input[256]={}; // stores user's input
     bool pContinue = true; // stores user's choice to continue or quit program
 
     // hashModulus samples full 256 character hash and returns 37 characters (256/7 is approximately 37).
-    // If a collision is found in future, lengthen hash by lowering value of hashModulus => check if collision is still present.
+    // If a collision is found in future, lengthen hash by lowering value of hashModulus.
     int hashModulus = 7;
 
     // 37 character hash can consist of any character stored in charSet array.
-    // for example, DjereHash of "Linux" (with hashModulus of 7 and using default functions) is DX2UBtq6jZBqLGf5KFZNduDRti3z6yKxiT5th
+    // DjereHash of "Linux" is DX2UBtq6jZBqLGf5KFZNduDRti3z6yKxiT5th
     const unsigned char charSet[62] = {'0','1','2','3','4','5','6','7','8','9',
     'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z',
     'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'};
@@ -37,10 +37,9 @@ int main ()
         {
             for(int j=0; j< 256; j++)
             {
-                 // You can generate different hashes for same input by changing functions below. WARNING: this may introduce collisions
-                // not present with default settings. Default functions maximize randomness of hash output in O( N^2 ) time.
-                ipSum = ipSum + (input[j]+1)*pow(j+1,2); // default function: ipSum = ipSum + (input[j]+1)*pow(j+1,2);
-                ipSum = (ipSum + 1) * log(j+1000); // default function: ipSum = (ipSum + 1) * log(j+1000);
+                // You can generate different hashes for same input by changing functions below. 
+                ipSum = ipSum + (input[j]+1)*pow(j+1,2); // default: ipSum = ipSum + (input[j]+1)*pow(j+1,2);
+                ipSum = (ipSum + 1) * log(j+1000); // default: ipSum = (ipSum + 1) * log(j+1000);
             }
 
             if(i%hashModulus==0) // Default value of hashModulus is 7.
@@ -52,7 +51,7 @@ int main ()
         std::cin >> pContinue; // to do: add detection for erroneous input.
         std::cin.ignore(pContinue); // clear cin to avoid error in cin getline
 
-        // resets input array to zero to prevent inconsistent hashes (expect consistently same hash for the repeated same input)
+        // resets input array to zero to prevent inconsistent hashes
         for(int k = 0; k < 256; k++) input[k]=0;
         ipSum = 0;
     }
