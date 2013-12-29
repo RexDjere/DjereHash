@@ -22,8 +22,8 @@ int main ()
     // If a collision is found in future, lengthen hash by lowering value of hashModulus.
     const unsigned int hashModulus = 7;
 
-    // 37 character hash can consist of any character stored in charSet array.
-    // for example, DjereHash of "Linux" is DX2UBtq6jZBqLGf5KFZNduDRti3z6yKxiT5th
+    // Hash can consist of any character stored in charSet array.
+    // For example, DjereHash of "Linux" is DX2UBtq6jZBqLGf5KFZNduDRti3z6yKxiT5th
     const unsigned char charSet[62] = {'0','1','2','3','4','5','6','7','8','9',
     'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z',
     'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'};
