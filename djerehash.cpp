@@ -1,8 +1,7 @@
 /*********************************************************************
 * DjereHash: a simple hashing program.                               *
 **********************************************************************
-* Author: Rex Djere                                                  *
-* Contact: rdjere gmail                                              *
+* Author: Rex Djere                                                  *                                             *
 * Revision: 0.22, 12/29/2013 (see revisions.txt)                     *
 * License: GNU GPL v.3 (see license.txt)                             *
 * Copyright: Rex Djere, 12/06/2013                                   *
