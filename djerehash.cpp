@@ -2,9 +2,10 @@
 * DjereHash: a simple hashing program.                               *
 **********************************************************************
 * Author: Rex Djere                                                  *                                             *
-* Revision: 0.22, 12/29/2013 (see revisions.txt)                     *
+* Revision: 0.23, 05/14/2015 (see revisions.txt)                     *
 * License: GNU GPL v.3 (see license.txt)                             *
-* Copyright: Rex Djere, 12/06/2013                                   *
+* Copyright (Origial): Rex Djere, 12/06/2013                         *
+* Copyright: Rex Djere, 2013 - Present                               *
 *********************************************************************/
 
 // DjereHash take a string (maximum of 256 characters), and converts it to a 256 character hash.
@@ -12,12 +13,16 @@
 
 #include <iostream>
 #include <cmath>
+#include <string>
 
 int main ()
 {
     unsigned int ipSum = 0; // proportional to ASCII sum of all characters input by user
     char input[256]={}; // stores user's input
     bool pContinue = true; // stores user's choice to continue or quit program
+    std::string hashString; // stores hash in string instead of array
+
+    hashString.clear(); // clear intialized string values
 
     // hashModulus samples full 256 character hash and returns 37 characters (256/7 is approximately 37).
     // If a collision is found in future, lengthen hash by lowering value of hashModulus.
@@ -45,9 +50,13 @@ int main ()
 
             if(i%hashModulus==0) // Default value of hashModulus is 7.
             {
-                std::cout << charSet[ipSum%62]; // generates 1 of the hash characters at a time until full hash is complete
+                //std::cout << charSet[ipSum%62]; // generates 1 of the hash characters at a time until full hash is complete
+                hashString += charSet[ipSum%62];
             }
         }
+
+        std::cout << hashString << std::endl;
+        hashString.clear(); // if you don't clear hash after each round, it will print the current and previous hashes
         std::cout << std::endl << "Please enter 1 to hash another string, or 0 to quit:" << " ";
         std::cin >> pContinue; // to do: add detection for erroneous input.
         std::cin.ignore(pContinue); // clear cin to avoid error in cin getline
