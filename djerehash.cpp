@@ -7,7 +7,7 @@
 int main ()
 {
    unsigned int inputSum = 0;
-   unsigned long int variant = 1000;
+   unsigned long int variant = 699425794;
    bool userChoosesContinue = true;
    std::string hashInput;
    std::string hashOutput;
