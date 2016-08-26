@@ -6,16 +6,13 @@
 
 int main ()
 {
-
-   // variables
    unsigned int inputSum = 0;
-   unsigned long int variant = 1000;
-   //char inputArray[256]={};
+   unsigned long int variant = 1389750426321023;
    bool userChoosesContinue = true;
    std::string hashInput;
    std::string hashOutput;
-   
-   // functions
+
+   hashInput.clear();
    hashOutput.clear();
 
    const unsigned int hashModulus = 4; // sets output length to 64 Hex characters (256 bits)
@@ -39,8 +36,12 @@ int main ()
             hashOutput += hashCharacterSet[inputSum%16];
          }
       }
+
    std::cout << hashOutput << std::endl;
+
+   hashInput.clear();
    hashOutput.clear();
+
    std::cout << std::endl << "Please enter 1 to hash another string, or 0 to quit:" << " ";
    std::cin >>    userChoosesContinue;
    std::cin.ignore(userChoosesContinue);
