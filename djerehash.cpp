@@ -10,9 +10,11 @@ int main ()
    // variables
    unsigned int inputSum = 0;
    unsigned long int variant = 1000;
-   char inputArray[256]={};
+   //char inputArray[256]={};
    bool userChoosesContinue = true;
+   std::string hashInput;
    std::string hashOutput;
+   
 
    // functions
    hashOutput.clear();
@@ -23,15 +25,15 @@ int main ()
    while (userChoosesContinue)
    {
       std::cout << "Enter the string that you would like to hash:" << std::endl;
-      std::cin.getline(inputArray,256);
+      std::getline(std::cin,hashInput);
       for(int i=0;i<256;i++)
       {
-         for(int j=0; j< 256; j++)
+         for(int j=0; j<hashInput.size(); j++)
          {
-            // You can generate different hashes for same inputArray by changing functions below.
-            // default: inputSum = inputSum + (inputArray[j]+1)*pow(j+1,2);
-            inputSum = inputSum + (inputArray[j]+1)*pow(j+1,2);
-            inputSum = (inputSum + 1) * log(j+variant); // default: inputSum = (inputSum + 1) * log(j+variant);
+            // You can generate different hashes for same hashInput by changing functions below.
+            // default: inputSum = inputSum + (hashInput[j]+1)*pow(j+1,2);
+            inputSum = inputSum + (hashInput[j]+1)*pow(j+1,2);
+            inputSum = (inputSum + 1) * log(j+variant); // default: inputSum = (inputSum + 1) * log(j+1000);
          }
          if(i%hashModulus==0)
          {
@@ -44,8 +46,8 @@ int main ()
    std::cin >>    userChoosesContinue;
    std::cin.ignore(userChoosesContinue);
 
-   // resets inputArray array to zero to prevent inconsistent hashes
-   for(int k = 0; k < 256; k++) inputArray[k]=0;
+   // resets hashInput to zero to prevent inconsistent hashes
+   for(int k = 0; k < hashInput.size(); k++) hashInput[k]=0;
    inputSum = 0;
    }
    return 0;
