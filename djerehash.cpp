@@ -15,7 +15,6 @@ int main ()
    std::string hashInput;
    std::string hashOutput;
    
-
    // functions
    hashOutput.clear();
 
@@ -52,4 +51,5 @@ int main ()
    }
    return 0;
 }
+
 
