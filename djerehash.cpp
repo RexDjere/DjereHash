@@ -1,4 +1,5 @@
 //DjereHash: a simple hashing program.
+//  © 2013-Present Rex Djere
 
 #include <iostream>
 #include <cmath>
