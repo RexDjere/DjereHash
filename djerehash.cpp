@@ -1,4 +1,4 @@
-// DjereHash: a simple hashing program.
+// DjereHash: a simple 256 bit hashing program.
 //  © 2013-Present Rex Djere.
 // License: GNU GPL version 3 or later.
 
