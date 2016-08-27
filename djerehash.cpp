@@ -26,7 +26,7 @@ int main ()
       std::getline(std::cin,hashInput);
       for(int i=0;i<256;i++)
       {
-         for(int j=0; j<hashInput.size(); j++)
+         for(unsigned int j=0; j<hashInput.size(); j++)
          {
             // You can generate different hashes for same hashInput by changing functions below.
             // default: inputSum = inputSum + (hashInput[j]+1)*pow(j+1,2);
@@ -49,7 +49,7 @@ int main ()
    std::cin.ignore(userChoosesContinue);
 
    // resets hashInput to zero to prevent inconsistent hashes
-   for(int k = 0; k < hashInput.size(); k++) hashInput[k]=0;
+   for(unsigned int k = 0; k < hashInput.size(); k++) hashInput[k]=0;
    inputSum = 0;
    }
    return 0;
