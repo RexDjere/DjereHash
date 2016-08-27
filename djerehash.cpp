@@ -1,5 +1,6 @@
-//DjereHash: a simple hashing program.
+// DjereHash: a simple hashing program.
 //  © 2013-Present Rex Djere
+// License: GNU GPL version 3
 
 #include <iostream>
 #include <cmath>
