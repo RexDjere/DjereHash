@@ -48,11 +48,13 @@ int main ()
    std::cin >>    userChoosesContinue;
    std::cin.ignore(userChoosesContinue);
 
-   // resets hashInput to zero to prevent inconsistent hashes
+    // resets everything to zero to prevent inconsistent hashes
    for(unsigned int k = 0; k < hashInput.size(); k++) hashInput[k]=0;
+   for(unsigned int l = 0; l < hashOutput.size(); l++) hashOutput[l]=0;
    inputSum = 0;
    }
    return 0;
 }
+
 
 
